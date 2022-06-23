@@ -37,6 +37,18 @@
         <h1 class="text-center">
             Welcome to User page.
         </h1>
+        <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item active">
+            <a class="nav-link" href="/user_view">Pdf Download </span></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/url_provider_view">Url provider view</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/html_snippet_user">Html Snipet view</a>
+            </li>
+        </ul>
 </div>
 
 <script src="{{asset('js/app.js')}}"></script>

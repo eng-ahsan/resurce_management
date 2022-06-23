@@ -37,6 +37,17 @@
         <h1 class="text-center">
             Welcome to Admin page.
         </h1>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="/welcome">Pdf Upload </span></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/url_provider">Url provider</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/html_snippet">Html Snipet</a>
+            </li>
+        </ul>
 </div>
 
 <script src="{{asset('js/app.js')}}"></script>

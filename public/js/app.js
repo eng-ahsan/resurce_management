@@ -43003,7 +43003,9 @@ var render = function () {
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-sm-12 table-responsive" }, [
-        _c("h2", { staticClass: "text-center" }, [_vm._v("List Of Resource")]),
+        _c("h2", { staticClass: "text-center" }, [
+          _vm._v("List Of HTML snippet"),
+        ]),
         _vm._v(" "),
         _c(
           "table",
@@ -43281,7 +43283,7 @@ var render = function () {
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-sm-12 table-responsive" }, [
-        _c("h2", { staticClass: "text-center" }, [_vm._v("List Of Resource")]),
+        _c("h2", { staticClass: "text-center" }, [_vm._v("List Of PDF")]),
         _vm._v(" "),
         _c(
           "table",
@@ -43387,7 +43389,7 @@ var render = function () {
   return _c("div", [
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-sm-12 table-responsive" }, [
-        _c("h2", { staticClass: "text-center" }, [_vm._v("List Of Resource")]),
+        _c("h2", { staticClass: "text-center" }, [_vm._v("List Of PDF")]),
         _vm._v(" "),
         _c(
           "table",
@@ -43597,7 +43599,7 @@ var render = function () {
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-sm-12 table-responsive" }, [
-        _c("h2", { staticClass: "text-center" }, [_vm._v("List Of Resource")]),
+        _c("h2", { staticClass: "text-center" }, [_vm._v("List Of Link")]),
         _vm._v(" "),
         _c(
           "table",
@@ -43711,7 +43713,7 @@ var render = function () {
   return _c("div", [
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-sm-12 table-responsive" }, [
-        _c("h2", { staticClass: "text-center" }, [_vm._v("List Of Resource")]),
+        _c("h2", { staticClass: "text-center" }, [_vm._v("List Of Link")]),
         _vm._v(" "),
         _c(
           "table",

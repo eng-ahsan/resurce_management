@@ -24,7 +24,7 @@
         </form>
         <div class="row">
             <div class="col-sm-12 table-responsive">
-                <h2 class="text-center">List Of Resource</h2>
+                <h2 class="text-center">List Of PDF</h2>
                 <table class="table table-hover table-bordered table-striped dataTable no-footer table-sm text-center" role="grid" aria-describedby="sampleTable_info">
                     <thead>
                         <tr>
