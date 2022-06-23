@@ -9,7 +9,7 @@ class FileDownloadController extends Controller
     public function filedownload(Request $request)
     {
 
-        $file = public_path(). "/storage/" .  $request->input('file');
+        $file = public_path(). "/upload/" .  $request->input('file');
 
         $headers = [
               'Content-Type' => 'application/pdf',

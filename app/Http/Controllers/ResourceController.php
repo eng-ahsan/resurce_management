@@ -28,7 +28,7 @@ class ResourceController extends Controller
     {
         $file = $request->file('pdf');
         $fileName = time().'.'.$file->getClientOriginalExtension();
-        $request->pdf->move(public_path('storage'), $fileName);
+        $request->pdf->move(public_path('upload'), $fileName);
         
         $resource = new Resources();
         $finalData = collect($request->only($resource->getFillable()))
