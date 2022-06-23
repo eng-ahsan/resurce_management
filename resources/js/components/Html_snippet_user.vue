@@ -19,8 +19,11 @@
                             <td>{{item.title}}</td>
                             <td>{{item.description}}</td>
                             <td>
-                                <button type="button" class="btn btn-primary" @click="show(item.id)">
-                                    Show
+                                <button 
+                                    type="button" 
+                                    class="btn btn-primary" 
+                                    @click="show(item)">
+                                    Show HTML Code
                                 </button>
                             </td>
                         </tr>
@@ -29,10 +32,11 @@
             </div>
         </div>
         <modal name="example">
-            <button @click="$modal.hide('example')">
-                    ❌
-            </button>
-            <span>{{ item.html_snippet }}</span>
+
+            <button @click="$modal.hide('example')">Close</button>
+            <button @click="copyRawCode()">Copy Raw Code</button>
+            <div v-html="htmlSnippet"></div>
+
         </modal>
       
     </div>
@@ -48,9 +52,10 @@ export default {
                 item:{
                     title:"",
                     description:"",
-                    html_snippet:"hello"
+                    htmlSnippet:""
                 },
                 temp_id:null,
+                htmlSnippet: ''
             }
         },
         mounted(){
@@ -61,17 +66,20 @@ export default {
                 axios.get('api/html-snippet')
                     .then(res => this.list =res.data)
             },
-             show(resource){
-                // console.log(resource);
+             show(item){
+                this.htmlSnippet = item.html_snippet;
                 this.$modal.show('example');
-
-                this.item ={
-                    html_snippet: resource.html_snippet,
-                }
-                
-            
-
             },
+            copyRawCode(){
+                this.$copyText(this.htmlSnippet)
+                    .then(function (e) {
+                        alert('Copied');
+                        console.log(e);
+                    }, function (e) {
+                        alert('Can not copy');
+                        console.log(e);
+                    });
+            }
         }
     }
 </script>
