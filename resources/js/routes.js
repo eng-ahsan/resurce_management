@@ -1,42 +1,101 @@
-const Welcome = () => import('./components/Resource.vue' /* webpackChunkName: "resource/js/components/welcome" */)
-const User_view = () => import('./components/User_view.vue' /* webpackChunkName: "resource/js/components/category/list" */)
-const Html_snippet_user = () => import('./components/Html_snippet_user.vue' /* webpackChunkName: "resource/js/components/category/add" */)
-const Html_snippet = () => import('./components/Html_snippet' /* webpackChunkName: "resource/js/components/category/edit" */)
-const UrlProvider = () => import('./components/UrlProvider' /* webpackChunkName: "resource/js/components/category/edit" */)
-const UrlProviderView = () => import('./components/UrlProviderView' /* webpackChunkName: "resource/js/components/category/edit" */)
+import ProductIndex from './components/products/index.vue';
+import ProductCreate from './components/products/create.vue';
+import ProductEdit from './components/products/edit.vue';
+
+//Url_provider
+import UrlIndex from './components/url/index.vue';
+import UrlCreate from './components/url/create.vue';
+import UrlEdit from './components/url/edit.vue';
+import UrlUserView from './components/url/UserView.vue';
+
+//Html_snippet
+import SnippetIndex from './components/Html_snippet/index.vue';
+import SnippetCreate from './components/Html_snippet/create.vue';
+import SnippetEdit from './components/Html_snippet/edit.vue';
+import SnippetView from './components/Html_snippet/UserView.vue';
+
+//pdf
+import PdfIndex from './components/pdf/index.vue';
+import PdfCreate from './components/pdf/create.vue';
+import PdfEdit from './components/pdf/edit.vue';
+import PdfDownload from './components/pdf/UserView.vue';
 
 
 
 export const routes = [
-
     {
-        name: 'home',
-        path: '/',
-        component: Welcome
+        path: '/products',
+        component: ProductIndex,
+        name: "ProductIndex"
     },
     {
-        name: 'userview',
-        path: '/user_view',
-        component: User_view
+        path: '/products/create',
+        component: ProductCreate,
+        name: "ProductCreate"
     },
     {
-        name: 'html_snippet_user',
-        path: '/html_snippet_user',
-        component: Html_snippet_user
+        path: '/products/edit/:productId',
+        component: ProductEdit,
+        name: "ProductEdit"
     },
     {
-        name: 'html_snippet',
-        path: '/html_snippet',
-        component: Html_snippet
+        path: '/urls',
+        component: UrlIndex,
+        name: "UrlIndex"
     },
     {
-        name: 'urlProvider',
-        path: '/url_provider',
-        component: UrlProvider
+        path: '/url/create',
+        component: UrlCreate,
+        name: "UrlCreate"
     },
     {
-        name: 'urlProviderview',
-        path: '/url_provider_view',
-        component: UrlProviderView
+        path: '/url/edit/:id',
+        component: UrlEdit,
+        name: "UrlEdit"
     },
-]
+    {
+        path: '/url/users',
+        component: UrlUserView,
+        name: "UrlUserView"
+    },
+    {
+        path: '/snippets',
+        component: SnippetIndex,
+        name: "SnippetIndex"
+    },
+    {
+        path: '/snippet/create',
+        component: SnippetCreate,
+        name: "SnippetCreate"
+    },
+    {
+        path: '/snippet/edit/:id',
+        component: SnippetEdit,
+        name: "SnippetEdit"
+    },
+    {
+        path: '/snippet/view',
+        component: SnippetView,
+        name: "SnippetView"
+    },
+    {
+        path: '/resource',
+        component: PdfIndex,
+        name: "PdfIndex"
+    },
+    {
+        path: '/resource/create',
+        component: PdfCreate,
+        name: "PdfCreate"
+    },
+    {
+        path: '/resource/edit/:id',
+        component: PdfEdit,
+        name: "PdfEdit"
+    },
+    {
+        path: '/resource/download',
+        component: PdfDownload,
+        name: "PdfDownload"
+    },
+];

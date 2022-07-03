@@ -1,35 +1,35 @@
+
+
 require('./bootstrap');
 
-window.Vue = require('vue').default;
+import Vue from 'vue'; // if this is not work add this =>  window.Vue = require('vue');
 
-// vue import
-import Vue from 'vue';
-
-// editor import
-import Vue2editor from 'vue2-editor';
-Vue.use(Vue2editor);
-import VModal from 'vue-js-modal';
-Vue.use(VModal);
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+import VueRouter from 'vue-router'; //import vuer-router for routing
+import VModal from 'vue-js-modal'; //import modal for po up
+import VueClipboard from 'vue-clipboard2' //impor veu-key board
+import Vue2editor from 'vue2-editor'; // editor import
 
 
-// clip board import
-import VueClipboard from 'vue-clipboard2';
 Vue.use(VueClipboard);
+Vue.use(Vue2editor);
+Vue.use(VModal);
+Vue.use(VueRouter);
+Vue.use(VueAxios, axios);
+
+import App from './app.vue';
+import { routes } from './routes';
 
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('pdfupload', require('./components/PdfUpload.vue').default);
-Vue.component('pdfdownload', require('./components/Pdfdownload.vue').default);
-Vue.component('html_snippet', require('./components/Html_snippet.vue').default);
-Vue.component('html_snippet_user', require('./components/Html_snippet_user.vue').default);
-Vue.component('urlprovider', require('./components/UrlProvider.vue').default);
-Vue.component('urluser', require('./components/UrlUser.vue').default);
-
+const router = new VueRouter({
+    mode: 'history',
+    routes: routes,
+    
+});
 
 const app = new Vue({
-el: '#app',
-components: {
-    "vue-html-editor": require("vue-html-editor")
-},
+    el: '#app',
+    router: router,
+    render: h => h(App),
 });
- 
