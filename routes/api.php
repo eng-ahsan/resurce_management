@@ -26,8 +26,6 @@ Route::middleware('api')->group(function () {
     Route::resource('snippet', HtmlSnippetController::class);
     Route::resource('resource', ResourceController::class);
     Route::get('download', [ResourceController::class, 'download']);
-    // Route::resource('file-download?file=', 'ResourceController@download');
-    Route::resource('products', ProductController::class);
 });
 
 

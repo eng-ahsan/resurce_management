@@ -2083,7 +2083,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -53577,15 +53576,6 @@ var render = function () {
                   "router-link",
                   {
                     staticClass: "nav-item nav-link",
-                    attrs: { to: { name: "ProductIndex" } },
-                  },
-                  [_vm._v("Products")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "nav-item nav-link",
                     attrs: { to: { name: "UrlIndex" } },
                   },
                   [_vm._v("Url")]
@@ -53612,7 +53602,7 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "nav-item nav-link",
+                    staticClass: "nav-item nav-link float-right",
                     attrs: { to: { name: "UrlUserView" } },
                   },
                   [_vm._v("Url User")]
@@ -53621,7 +53611,7 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "nav-item nav-link",
+                    staticClass: "nav-item nav-link float-right",
                     attrs: { to: { name: "PdfDownload" } },
                   },
                   [_vm._v("Pdf Download")]
@@ -53630,7 +53620,7 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "nav-item nav-link",
+                    staticClass: "nav-item nav-link float-right",
                     attrs: { to: { name: "SnippetView" } },
                   },
                   [_vm._v("Html Snippet")]
