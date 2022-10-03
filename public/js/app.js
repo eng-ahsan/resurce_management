@@ -53578,7 +53578,7 @@ var render = function () {
                     staticClass: "nav-item nav-link",
                     attrs: { to: { name: "UrlIndex" } },
                   },
-                  [_vm._v("Url")]
+                  [_vm._v("Url ")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -53587,7 +53587,7 @@ var render = function () {
                     staticClass: "nav-item nav-link",
                     attrs: { to: { name: "SnippetIndex" } },
                   },
-                  [_vm._v("Snippet")]
+                  [_vm._v("Snippet ")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -53623,7 +53623,7 @@ var render = function () {
                     staticClass: "nav-item nav-link float-right",
                     attrs: { to: { name: "SnippetView" } },
                   },
-                  [_vm._v("Html Snippet")]
+                  [_vm._v("Html Snippet user")]
                 ),
               ],
               1
